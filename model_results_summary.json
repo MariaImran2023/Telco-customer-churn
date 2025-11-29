@@ -1,0 +1,57 @@
+{
+  "best_model": "Random Forest (Tuned)",
+  "test_accuracy": 0.7974413646055437,
+  "test_roc_auc": 0.8374108950101206,
+  "best_params": {
+    "classifier__max_depth": 10,
+    "classifier__min_samples_leaf": 2,
+    "classifier__min_samples_split": 5,
+    "classifier__n_estimators": 200
+  },
+  "feature_importance": {
+    "feature": {
+      "0": "tenure",
+      "2": "TotalCharges",
+      "1": "MonthlyCharges",
+      "10": "InternetService_Fiber optic",
+      "25": "Contract_Two year",
+      "28": "PaymentMethod_Electronic check",
+      "24": "Contract_One year",
+      "13": "OnlineSecurity_Yes",
+      "19": "TechSupport_Yes",
+      "26": "PaperlessBilling_Yes"
+    },
+    "importance": {
+      "0": 0.20318432692632238,
+      "2": 0.15479448599550094,
+      "1": 0.11369432060434212,
+      "10": 0.07156696086293139,
+      "25": 0.06193181163435191,
+      "28": 0.05970729968959297,
+      "24": 0.036283004643493086,
+      "13": 0.03362686724538147,
+      "19": 0.025045748503426925,
+      "26": 0.01827765847052259
+    }
+  },
+  "all_models_performance": {
+    "Model": {
+      "0": "Logistic Regression",
+      "1": "Random Forest (Default)",
+      "2": "SVM (Linear)",
+      "3": "Random Forest (Tuned)"
+    },
+    "Accuracy": {
+      "0": 0.8045486851457001,
+      "1": 0.7839374555792467,
+      "2": 0.7974413646055437,
+      "3": 0.7974413646055437
+    },
+    "ROC-AUC": {
+      "0": 0.8360714082341553,
+      "1": 0.8163790113422823,
+      "2": 0.8271880872387676,
+      "3": 0.8374108950101206
+    }
+  }
+}
