@@ -1,64 +1,46 @@
 {
-  "best_model": "Random Forest (Tuned)",
-  "test_accuracy": 0.7974413646055437,
-  "test_roc_auc": 0.8374108950101206,
-  "test_f1_score": 0.5739910313901345,
-  "best_params": {
-    "classifier__max_depth": 10,
-    "classifier__min_samples_leaf": 2,
-    "classifier__min_samples_split": 5,
-    "classifier__n_estimators": 200
+  "recommended_deployment_model": "Logistic Regression",
+  "reason": "Better generalization, minimal overfitting, higher interpretability",
+  "models_performance": {
+    "Logistic_Regression": {
+      "accuracy": 0.8045486851457001,
+      "roc_auc": 0.8360714082341553,
+      "f1_score": 0.6088193456614509,
+      "train_test_gap": "0.0003 (GOOD FIT)"
+    },
+    "Random_Forest_Tuned": {
+      "accuracy": 0.7974413646055437,
+      "roc_auc": 0.8374108950101206,
+      "f1_score": 0.5739910313901345,
+      "train_test_gap": "0.0550 (MODERATE OVERFITTING)",
+      "best_parameters": {
+        "classifier__max_depth": 10,
+        "classifier__min_samples_leaf": 2,
+        "classifier__min_samples_split": 5,
+        "classifier__n_estimators": 200
+      }
+    }
   },
-  "feature_importance": {
+  "feature_importance_top_5": {
     "feature": {
       "0": "tenure",
       "2": "TotalCharges",
       "1": "MonthlyCharges",
       "10": "InternetService_Fiber optic",
-      "25": "Contract_Two year",
-      "28": "PaymentMethod_Electronic check",
-      "24": "Contract_One year",
-      "13": "OnlineSecurity_Yes",
-      "19": "TechSupport_Yes",
-      "26": "PaperlessBilling_Yes"
+      "25": "Contract_Two year"
     },
     "importance": {
       "0": 0.20318432692632238,
       "2": 0.15479448599550094,
       "1": 0.11369432060434212,
       "10": 0.07156696086293139,
-      "25": 0.06193181163435191,
-      "28": 0.05970729968959297,
-      "24": 0.036283004643493086,
-      "13": 0.03362686724538147,
-      "19": 0.025045748503426925,
-      "26": 0.01827765847052259
+      "25": 0.06193181163435191
     }
   },
-  "all_models_performance": {
-    "Model": {
-      "0": "Logistic Regression",
-      "1": "Random Forest (Default)",
-      "2": "SVM (Linear)",
-      "3": "Random Forest (Tuned)"
-    },
-    "Accuracy": {
-      "0": 0.8045486851457001,
-      "1": 0.7839374555792467,
-      "2": 0.7974413646055437,
-      "3": 0.7974413646055437
-    },
-    "ROC-AUC": {
-      "0": 0.8360714082341553,
-      "1": 0.8163790113422823,
-      "2": 0.8271880872387676,
-      "3": 0.8374108950101206
-    },
-    "F1-Score": {
-      "0": 0.6088193456614509,
-      "1": 0.5449101796407185,
-      "2": 0.5911047345767575,
-      "3": 0.5739910313901345
-    }
-  }
+  "high_risk_segments": [
+    "Contract: Month-to-month (42.7%)",
+    "Internet: Fiber optic (41.9%)",
+    "Payment: Electronic check (45.3%)",
+    "Tenure \u2264 12 months: 47.7%"
+  ]
 }
